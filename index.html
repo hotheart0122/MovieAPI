@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Movie List</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/movies.html">Movies</a></li>
+                </ul>  
+            </nav>
+        </header>
+        <div class="three-quarter-width center-block container">
+            <aside class="col-md-7">
+                <div id="vehicle-list-panel" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h1>Manufacturer List</h1>
+                    </div>
+                    <div class="panel-body">
+                        <ul id="manufacturer-list" class="list-group">
+                        </ul>
+                    </div>
+                </div>
+            </aside> 
+            <main class="col-md-5">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h1>Find Manufacturers</h1>
+                    </div>
+                    <div class="panel-body">
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="new-manufacturer-name">Manufacturer name</label>
+                                <input type="text" id="new-manufacturer-name" name="name" class="form-control">
+                            </div>
+                            <button type="button" id="save-button" class="btn btn-info">Save</button>
+                            <button type="button" id="fetch-button" class="btn btn-success">Fetch Manufacturers</button>
+                            <button type="button" id="clear-button" class="btn btn-info">Clear</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <small>&copy; 2017 Code Career Academy</small>
+        </footer>        
+        <!-- Latest compiled and minified JavaScript -->
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="/js/movies.js"></script>
+    </body>
+</html>
