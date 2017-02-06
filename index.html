@@ -17,43 +17,59 @@
             <nav class="navbar navbar-default">
                 <ul class="nav navbar-nav">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/movies.html">Movies</a></li>
+                    <li><a href="/about.html">About</a></li>
                 </ul>  
             </nav>
         </header>
-        <div class="three-quarter-width center-block container">
-            <aside class="col-md-7">
-                <div id="vehicle-list-panel" class="panel panel-default">
+
+        
+        <div class="three-quarter-width center-block container-fluid">
+           
+            <main>
+                <div class="col-md-3 panel panel-default">
                     <div class="panel-heading">
-                        <h1>Manufacturer List</h1>
-                    </div>
-                    <div class="panel-body">
-                        <ul id="manufacturer-list" class="list-group">
-                        </ul>
-                    </div>
-                </div>
-            </aside> 
-            <main class="col-md-5">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h1>Find Manufacturers</h1>
+                        <h1>Search Movies</h1>
+                        <p> Search movies by a title</p>
                     </div>
                     <div class="panel-body">
                         <form action="#" method="POST">
-                            <div class="form-group">
-                                <label for="new-manufacturer-name">Manufacturer name</label>
-                                <input type="text" id="new-manufacturer-name" name="name" class="form-control">
-                            </div>
-                            <button type="button" id="save-button" class="btn btn-info">Save</button>
-                            <button type="button" id="fetch-button" class="btn btn-success">Fetch Manufacturers</button>
+                            <input type="text" id="input-movie-text" class=""> <br>
+
+                            <button type="button" id="fetch-movie-button" class="btn btn-success">Search</button>
                             <button type="button" id="clear-button" class="btn btn-info">Clear</button>
                         </form>
                     </div>
                 </div>
+                        
+                <div id="movie-list-panel" class="col-md-4 panel panel-default">
+                    <div class="panel-heading">
+                        <h1>Movie List</h1>
+                        <p> only shows five movies </p>
+                    </div>
+                    <div class="panel-body">
+                        <ul id="movie-list" class="list-group">
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 panel panel-default">
+                    <div class="panel-heading">
+                        <h1>Movie Info</h1>
+                        <p> Clink the lick for more info</p>
+                    </div>
+                    <div class="panel-body image" id="movie-info">
+                         <!--<img src="#" id="poster">-->
+                         <!--<button type="button" id="more-info-button" class="btn btn-info">More Info</button>-->
+                    </div>
+
+                </div>
+       
             </main>
+       
         </div>
         <footer>
-            <small>&copy; 2017 Code Career Academy</small>
+            <small>&copy 2017 Kevin Hwangi Kim </small>
+            <!--<small> API provided by http://www.omdbapi.com </small>-->
         </footer>        
         <!-- Latest compiled and minified JavaScript -->
         <script
