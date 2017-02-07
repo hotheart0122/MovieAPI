@@ -26,7 +26,7 @@ $(document).ready(function(){
                 
                 newImage.src = event.artworkUrl100;
                 newItem.classList.add("list-group-item");
-
+                newImage.classList.add("img-thumbnail");
                 // newAnchor.href =event.trackViewUrl;
                 newAnchor.innerText = event.trackName;
                 // newAnchor.href = newImage.src;
