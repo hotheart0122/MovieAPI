@@ -7,9 +7,8 @@ $(document).ready(function(){
         searchUri = "https://itunes.apple.com/search?term={{title}}&entity=movie&limit=5&callback=?",
 
         movieInfo = document.getElementById("movie-info"),
-        newSearchUri,
-        newTitleUri;
-
+        newSearchUri;
+        
     var renderList = function(eventData){
         movieList.innerHTML = "";
         if(!eventData){
@@ -20,33 +19,25 @@ $(document).ready(function(){
 
         eventData.forEach(function(event){
             var newItem = document.createElement("li"),
-                newAnchor = document.createElement("a");
+                newAnchor = document.createElement("a"),
                 newImage = document.createElement("img");
-               
-                
+                               
                 newImage.src = event.artworkUrl100;
                 newItem.classList.add("list-group-item");
                 newImage.classList.add("img-thumbnail");
-                // newAnchor.href =event.trackViewUrl;
+                
                 newAnchor.innerText = event.trackName;
-                // newAnchor.href = newImage.src;
-
                 newAnchor.href = "#";
 
-
                 newAnchor.addEventListener("click", function(){ 
-                    // newImage = document.createElement("img");
-                    // newImage.src = event.artworkUrl100;
-                    
+                                  
                     var iTunesAnchor = document.createElement("a");
                     iTunesAnchor.innerText = event.longDescription;
                     
                     iTunesAnchor.href = event.trackViewUrl;
                     movieInfo.appendChild(iTunesAnchor);
-                    
                 });
-                
-                            
+                                            
                 newItem.appendChild(newImage);
                 newItem.appendChild(newAnchor);
                 movieList.appendChild(newItem);
