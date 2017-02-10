@@ -61,7 +61,7 @@ $(document).ready(function(){
     clearButton.addEventListener("click", function(){
         movieList.innerHTML = "";
         inputMovie.value = "";
-        movieInfo.innerText = "";
+        movieInfo.innerHTML = "";
     });
 
 });
