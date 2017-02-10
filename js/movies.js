@@ -31,10 +31,16 @@ $(document).ready(function(){
 
                 newAnchor.addEventListener("click", function(){ 
                                   
-                    var iTunesAnchor = document.createElement("a");
-                    iTunesAnchor.innerText = event.longDescription;
+                    var iTunesAnchor = document.createElement("a"),
+                        newDiv = document.createElement("div");
+                        newDiv.innerHTML = event.longDescription;
+                    iTunesAnchor.innerText = "view on iTunes";
+                    iTunesAnchor.classList.add("btn");
+                    iTunesAnchor.classList.add("btn-primary");
+
                     
                     iTunesAnchor.href = event.trackViewUrl;
+                    movieInfo.appendChild(newDiv);
                     movieInfo.appendChild(iTunesAnchor);
                 });
                                             
@@ -54,7 +60,7 @@ $(document).ready(function(){
 
     clearButton.addEventListener("click", function(){
         movieList.innerHTML = "";
-        inputMovie.innerText = "";
+        inputMovie.value = "";
         movieInfo.innerText = "";
     });
 
